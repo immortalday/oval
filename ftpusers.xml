@@ -1,0 +1,204 @@
+<def-group>
+  <definition class="compliance" id="etc_ftpusers" version="1">
+    <metadata>
+      <title>Check the /etc/ftpusers content is set</title>
+      <affected family="unix">
+        <platform>multi_platform_rhel</platform>
+      </affected>
+      <description>Check the /etc/ftpusers content is set.</description>
+    </metadata>
+    <criteria>
+      <criterion test_ref="test_etc_ftpusers_nwroot" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_root" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_daemon" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_bin" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_sys" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_adm" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_uucp" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_guest" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_lpd" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_invscout" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_imnadm" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_ipsec" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_nwuser" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_nwprint" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_ldap" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_nuucp" comment="Check the /etc/ftpusers content is set" />
+      <criterion test_ref="test_etc_ftpusers_netinst" comment="Check the /etc/ftpusers content is set" />
+    </criteria>
+  </definition>
+
+<!-- state -->
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_nwroot" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_nwroot" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_root" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_root" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_daemon" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_daemon" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_bin" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_bin" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_sys" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_sys" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_adm" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_adm" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_uucp" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_uucp" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_guest" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_guest" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_lpd" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_lpd" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_invscout" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_invscout" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_imnadm" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_imnadm" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_ipsec" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_ipsec" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_nwuser" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_nwuser" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_nwprint" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_nwprint" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_ldap" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_ldap" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_nuucp" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_nuucp" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_etc_ftpusers_netinst" check_existence="all_exist" check="all" comment="'CD/DVD drive is not listed in /etc/fstab" version="1">
+    <ind:object object_ref="object_etc_ftpusers_netinst" />
+  </ind:textfilecontent54_test>
+<!-- check -->
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_nwroot" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^nwroot$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_root" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^root$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_daemon" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^daemon$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_bin" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^bin$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_sys" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^sys$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_adm" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^adm$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_uucp" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^uucp$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_guest" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^guest$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_lpd" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^lpd$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_invscout" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^invscout$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_imnadm" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^imnadm$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_ipsec" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^ipsec$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_nwuser" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^nwuser$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_nwprint" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^nwprint$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_ldap" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^ldap$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_nuucp" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^nuucp$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_etc_ftpusers_netinst" version="1">
+    <ind:filepath>/etc/ftpusers</ind:filepath>
+    <ind:pattern operation="pattern match" datatype="string">^netinst$</ind:pattern>
+    <ind:instance datatype="int" operation="equals">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+</def-group>
