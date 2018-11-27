@@ -1,0 +1,41 @@
+<def-group>
+  <definition class="compliance" id="minpass" version="1">
+    <metadata>
+      <title>test shadow</title>
+      <affected family="unix">
+        <platform>multi_platform_rhel</platform>
+        <platform>multi_platform_fedora</platform>
+      </affected>
+      <description>test shadow</description>
+    </metadata>
+    <criteria>
+      <criterion test_ref="test_shadow" />
+    </criteria>
+  </definition>
+
+  <unix:shadow_test id="test_shadow" check="all" version="2" comment="test comm" state_operator="AND">
+    <unix:object object_ref="object_test_shadow" />
+    <unix:state state_ref="state_test_shadow_chg"/>
+  </unix:shadow_test>
+
+
+ <unix:shadow_object id="object_ref_user" version="1">
+   <unix:username operation="pattern match">.+</unix:username>
+ </unix:shadow_object>
+
+ <unix:shadow_object id="object_test_shadow" version="1">
+   <set>
+       <object_reference>oval:ssg-object_ref_user:obj:1</object_reference>
+       <filter>sts_shadow_pass</filter>
+   </set>
+ </unix:shadow_object>
+
+ <unix:shadow_state id="sts_shadow_pass" version="1">
+    <unix:password operation="pattern match">^([!\*]+)</unix:password>
+ </unix:shadow_state>
+
+ <unix:shadow_state id="state_test_shadow_chg" version="1">
+    <unix:chg_allow datatype="int">7</unix:chg_allow>
+ </unix:shadow_state>
+
+</def-group>
