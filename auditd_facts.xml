@@ -1,0 +1,267 @@
+<def-group>
+  <definition class="compliance" id="auditd_facts" version="1">
+    <metadata>
+      <title>test shadow</title>
+      <affected family="unix">
+        <platform>multi_platform_rhel</platform>
+        <platform>multi_platform_fedora</platform>
+      </affected>
+      <description>auditd abb</description>
+    </metadata>
+    <criteria>
+      <criterion test_ref="test_log_file" />
+      <criterion test_ref="test_log_format" />
+      <criterion test_ref="test_log_group" />
+      <criterion test_ref="test_priority_boost" />
+      <criterion test_ref="test_flush" />
+      <criterion test_ref="test_freq" />
+      <criterion test_ref="test_num_logs" />
+      <criterion test_ref="test_disp_qos" />
+      <criterion test_ref="test_dispatcher" />
+      <criterion test_ref="test_name_format" />
+      <criterion test_ref="test_max_log_file" />
+      <criterion test_ref="test_max_log_file_action" />
+      <criterion test_ref="test_space_left" />
+      <criterion test_ref="test_space_left_action" />
+      <criterion test_ref="test_action_mail_acct" />
+      <criterion test_ref="test_admin_space_left" />
+      <criterion test_ref="test_admin_space_left_action" />
+      <criterion test_ref="test_disk_full_action" />
+      <criterion test_ref="test_tcp_listen_queue" />
+      <criterion test_ref="test_tcp_client_max_idle" />
+      <criterion test_ref="test_enable_krb5" />
+      <criterion test_ref="test_krb5_principal" />
+    </criteria>
+  </definition>
+
+<!-- test -->
+
+  <ind:textfilecontent54_test id="test_log_file" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_log_file" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_log_format" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_log_format" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_log_group" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_log_group" />
+  </ind:textfilecontent54_test> 
+
+  <ind:textfilecontent54_test id="test_priority_boost" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_priority_boost" />
+  </ind:textfilecontent54_test> 
+
+  <ind:textfilecontent54_test id="test_flush" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_flush" />
+  </ind:textfilecontent54_test> 
+
+  <ind:textfilecontent54_test id="test_freq" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_freq" />
+  </ind:textfilecontent54_test> 
+
+  <ind:textfilecontent54_test id="test_num_logs" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_num_logs" />
+  </ind:textfilecontent54_test> 
+
+  <ind:textfilecontent54_test id="test_disp_qos" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_disp_qos" />
+  </ind:textfilecontent54_test> 
+
+  <ind:textfilecontent54_test id="test_dispatcher" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_dispatcher" />
+  </ind:textfilecontent54_test> 
+
+  <ind:textfilecontent54_test id="test_name_format" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_name_format" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_max_log_file" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_max_log_file" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_max_log_file_action" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_max_log_file_action" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_space_left" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_space_left" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_space_left_action" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_space_left_action" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_action_mail_acct" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_action_mail_acct" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_admin_space_left" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_admin_space_left" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_admin_space_left_action" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_admin_space_left_action" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_disk_full_action" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_disk_full_action" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_tcp_listen_queue" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_tcp_listen_queue" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_tcp_client_max_idle" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_tcp_client_max_idle" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_enable_krb5" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_enable_krb5" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_krb5_principal" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_krb5_principal" />
+  </ind:textfilecontent54_test>
+
+<!-- objects -->
+
+  <ind:textfilecontent54_object id="object_log_file" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^log_file = /var/log/audit/audit.log$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_log_format" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^log_format = RAW$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_log_group" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^log_group = root$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_priority_boost" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^priority_boost = 4$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_flush" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^flush = INCREMENTAL$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>    
+
+  <ind:textfilecontent54_object id="object_freq" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^freq = 20$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_num_logs" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^num_logs = 4$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_disp_qos" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^disp_qos = lossy$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_dispatcher" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^dispatcher = /sbin/audispd$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_name_format" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^name_format = NONE$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_max_log_file" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^max_log_file = 5$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_max_log_file_action" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^max_log_file_action = ROTATE$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_space_left" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^space_left = 75$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_space_left_action" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^space_left_action = SYSLOG$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_action_mail_acct" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^action_mail_acct = root$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_admin_space_left" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^admin_space_left = 50$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_admin_space_left_action" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^admin_space_left_action = SUSPEND$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_disk_full_action" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^disk_full_action = SUSPEND$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_disk_error_action" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^disk_error_action = SUSPEND$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_tcp_listen_queue" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^tcp_listen_queue = 5$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_tcp_client_max_idle" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^tcp_client_max_idle = 0$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_enable_krb5" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^enable_krb5 = no$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+  <ind:textfilecontent54_object id="object_krb5_principal" version="1">
+    <ind:filepath>/etc/audit/auditd.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^krb5_principal = auditd$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object> 
+
+</def-group>
