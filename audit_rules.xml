@@ -1,0 +1,119 @@
+<def-group>
+  <definition class="compliance" id="audit_rules_facts" version="1">
+    <metadata>
+      <title>audit rules</title>
+      <affected family="unix">
+        <platform>multi_platform_rhel</platform>
+        <platform>multi_platform_fedora</platform>
+      </affected>
+      <description>auditd rules abb</description>
+    </metadata>
+    <criteria>
+      <criterion test_ref="test_e" />
+      <criterion test_ref="test_f" />
+      <criterion test_ref="test_b" />
+      <criterion test_ref="test_r" />
+      <criterion test_ref="test_D" />
+      <criterion test_ref="test_r1" />
+      <criterion test_ref="test_r2" />
+      <criterion test_ref="test_r3" />
+      <criterion test_ref="test_r4" />
+    </criteria>
+  </definition>
+
+<!-- test -->
+
+  <ind:textfilecontent54_test id="test_e" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_e" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_f" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_f" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_b" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_b" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_r" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_r" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_D" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_D" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_r1" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_r1" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_r2" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_r2" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_r3" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_r3" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_r4" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_r4" />
+  </ind:textfilecontent54_test>
+
+<!-- objects -->
+
+  <ind:textfilecontent54_object id="object_e" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-e 1$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+
+  <ind:textfilecontent54_object id="object_f" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-f 2$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_b" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-b 8192$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_r" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-r 0$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_D" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-D$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_r1" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-a exclude,always -F msgtype=CWD$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_r2" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-a always,exit -F euid=0 -F perm=wxa -k root_action$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_r3" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-a exit,always -F dir=/etc/ -F perm=wa$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_r4" version="1">
+    <ind:filepath>/etc/audit/audit.rules</ind:filepath>
+    <ind:pattern operation="pattern match">^-a exit,always -F dir=/var/log/ -F perm=wa$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+</def-group>
