@@ -1,0 +1,85 @@
+<def-group>
+  <definition class="compliance" id="audit_syslog" version="1">
+    <metadata>
+      <title>audit syslog</title>
+      <affected family="unix">
+        <platform>multi_platform_rhel</platform>
+        <platform>multi_platform_fedora</platform>
+      </affected>
+      <description>auditd syslog abb</description>
+    </metadata>
+    <criteria>
+      <criterion test_ref="test_active" />
+      <criterion test_ref="test_direction" />
+      <criterion test_ref="test_path" />
+      <criterion test_ref="test_type" />
+      <criterion test_ref="test_args" />
+      <criterion test_ref="test_format" />
+    </criteria>
+  </definition>
+
+<!-- tests -->
+
+  <ind:textfilecontent54_test id="test_active" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_active" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_direction" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_direction" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_path" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_path" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_type" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_type" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_args" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_args" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_format" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_format" />
+  </ind:textfilecontent54_test>
+
+<!-- objects -->
+
+  <ind:textfilecontent54_object id="object_active" version="1">
+    <ind:filepath>/etc/audisp/plugins.d/syslog.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^active = yes$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_direction" version="1">
+    <ind:filepath>/etc/audisp/plugins.d/syslog.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^direction = out$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_path" version="1">
+    <ind:filepath>/etc/audisp/plugins.d/syslog.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^path = builtin_syslog$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_type" version="1">
+    <ind:filepath>/etc/audisp/plugins.d/syslog.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^type = builtin$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_args" version="1">
+    <ind:filepath>/etc/audisp/plugins.d/syslog.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^args = LOG_INFO$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_format" version="1">
+    <ind:filepath>/etc/audisp/plugins.d/syslog.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^format = string$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+</def-group>
