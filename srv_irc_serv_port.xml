@@ -1,0 +1,31 @@
+<def-group>
+  <definition class="compliance" id="srv_irc_serv_port" version="1">
+    <metadata>
+      <title>audit rules</title>
+      <affected family="unix">
+        <platform>multi_platform_rhel</platform>
+        <platform>multi_platform_fedora</platform>
+      </affected>
+      <description>auditd rules abb</description>
+    </metadata>
+    <criteria>
+      <criterion test_ref="test_port_irc" />
+
+    </criteria>
+  </definition>
+
+<!-- test -->
+
+  <ind:textfilecontent54_test id="test_port_irc" check="all" comment="datd comment" version="1">
+    <ind:object object_ref="object_port_irc" />
+  </ind:textfilecontent54_test>
+
+<!-- objects -->
+
+  <ind:textfilecontent54_object id="object_port_irc" version="1">
+    <ind:filepath>/etc/services</ind:filepath>
+    <ind:pattern operation="pattern match">^#irc-serv.*529\/udp.*$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+</def-group>
