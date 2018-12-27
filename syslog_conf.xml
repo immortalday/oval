@@ -1,0 +1,42 @@
+<def-group>
+  <definition class="compliance" id="syslog_conf" version="1">
+    <metadata>
+      <title>audit rules</title>
+      <affected family="unix">
+        <platform>multi_platform_rhel</platform>
+        <platform>multi_platform_fedora</platform>
+      </affected>
+      <description>auditd rules abb</description>
+    </metadata>
+    <criteria operator="AND">
+      <criterion test_ref="test_syslog_conf" />
+      <criterion test_ref="test_syslog_send_port" />
+
+    </criteria>
+  </definition>
+
+<!-- test -->
+
+  <ind:textfilecontent54_test id="test_syslog_conf" check="all" comment="datd comment" version="1" >
+    <ind:object object_ref="object_syslog_user" />
+  </ind:textfilecontent54_test>
+
+  <ind:textfilecontent54_test id="test_syslog_send_port" check="all" comment="datd comment" version="1" >
+    <ind:object object_ref="object_syslog_send_port" />
+  </ind:textfilecontent54_test>
+
+<!-- objects -->
+
+  <ind:textfilecontent54_object id="object_syslog_user" version="1">
+    <ind:filepath>/etc/syslog.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^user.*.*\/var\/log\/audit_sys.log$</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+  <ind:textfilecontent54_object id="object_syslog_send_port" version="1">
+    <ind:filepath>/etc/syslog.conf</ind:filepath>
+    <ind:pattern operation="pattern match">^((.*.debug).*([\d.]):529$)</ind:pattern>
+    <ind:instance datatype="int" operation="greater than or equal">1</ind:instance>
+  </ind:textfilecontent54_object>
+
+</def-group>
